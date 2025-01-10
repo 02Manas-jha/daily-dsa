@@ -21,6 +21,6 @@ def soln(string):
         if freq[char] == 1:
             print(char, end="")
     return
-
+#time - O(n)
 inp = input()
 print(soln(inp))
