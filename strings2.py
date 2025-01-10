@@ -22,5 +22,6 @@ def soln(string):
             print(char, end="")
     return
 #time - O(n)
+#space - O(n)
 inp = input()
 print(soln(inp))
