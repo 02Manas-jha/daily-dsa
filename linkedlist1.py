@@ -21,7 +21,22 @@ def bruteforce(head):
     while temp is not None:
         temp.data = stack.pop()
         temp = temp.next
-    return head  
+    return head
+#Time - O(N)
+#Space - O(N)
+
+def optimalsoln(head):
+    prev = None
+    curr = head
+
+    while curr != None:
+        next = curr.next
+        curr.next = prev
+        prev = curr
+        curr = next
+    return prev
+#Time - O(N)
+#Space - O(1)
 
 def print_linked_list(head):
     temp = head
@@ -39,7 +54,7 @@ head.next.next.next.next = Node(5)
 print("Original Linked List:", end=" ")
 print_linked_list(head)
 
-head = bruteforce(head)
+head = optimalsoln(head)
 
 print("Reversed Linked List:", end=" ")
 print_linked_list(head)
