@@ -27,7 +27,8 @@ class Node:
     def __init__(self, data, next_node=None):
         self.data = data
         self.next = next_node
-
+#Time - O(N*2logN)
+#Space - O(N)
 def bruteforce(head):
     temp = head
     hash_set = set()
@@ -40,6 +41,8 @@ def bruteforce(head):
         temp = temp.next
     return False
 
+#Time - O(N)
+#Space - O(1)
 def optimal(head):
     slow = head
     fast = head
