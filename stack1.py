@@ -11,7 +11,8 @@ Explanation: If the expression is converted into an infix expression, it will be
 Input: str = “100 200 + 2 / 5 * 7 +”
 Output: 757
 """
-
+#Time - O(N)
+#space - O(N)
 class Stack:
 
     def __init__(self, capacity):
